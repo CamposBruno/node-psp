@@ -2,3 +2,5 @@ node_modules
 yarn.lock
 .env
 postgres-data
+__tests__/coverage
+__tests__/database.sqlite
