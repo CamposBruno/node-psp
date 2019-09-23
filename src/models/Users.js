@@ -1,5 +1,5 @@
 'use strict'
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const { Sequelize, Model } = require('sequelize')
 
 class Users extends Model {
