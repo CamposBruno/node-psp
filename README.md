@@ -103,5 +103,5 @@ curl -X GET  http://localhost:3000/transactions \
 Para visualizar os fundos do usuário é só executar um GET em `/balances`
 ````
 curl -X GET http://localhost:3000/balances \
-  -H 'Authorization: {{TOKEN}}' \
+  -H 'Authorization: Bearer {{TOKEN}}' \
 ````
