@@ -59,7 +59,9 @@ yarn payables
 ````
 
 ## API
-Para que os clientes processem transações `cash-in` eu criei uma mini api com autenticação por `JWT`.
+Para que os clientes processem transações `cash-in` eu criei uma mini api com autenticação por `JWT`
+
+Para facilitar eu incluí o arquivo `node-psp-api-request.json` para ser importado no Imsomnia.
 
 #### Sessions
 O cliente necessita de um token para interagir com a API. 
