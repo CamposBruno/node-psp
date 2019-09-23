@@ -26,6 +26,25 @@ informações de conexão no arquivo `.env`.
 yarn test
 ```
 
+## Migration
+Para que sejam criadas as tabelas no banco de dados é necessário rodar um comando de migração. 
+
+Esse comando executará também a população de um usuário na base de dados:
+
+`email : 'john@doe.com'`
+`password : 'pagarme'` 
+
+Para rodar a migration e o seed execute :
+
+````
+yarn migration
+````
+
+Para remover as tabelas do banco de dados execute:
+````
+yarn migration:undo
+````
+
 ## Running Service
 Existem dois serviços a serem executados, `api`  e `payables`
 
@@ -43,7 +62,7 @@ yarn payables
 Para que os clientes processem transações `cash-in` eu criei uma mini api com autenticação por `JWT`.
 
 #### Sessions
-O cliente necessita de um token para interagir com a API 
+O cliente necessita de um token para interagir com a API. 
 Para adiquiri-lo faça um POST em `/sessions` passando o email e a senha como parâmetros. 
 Essa requisição retornará as informações do usuário juntamente com o `token`
 
@@ -57,7 +76,7 @@ curl -X POST http://localhost:3000/sessions \
 ````
 
 #### Transaction
-Para criar uma transação o cliente enviará um POST para `/transaction` passando as informações por parametro
+Para criar uma transação o cliente enviará um POST para `/transaction` passando as informações por parametro:
 ````
 curl -X POST http://localhost:3000/transaction \
   -H 'Authorization: Bearer {{TOKEN}}' \
@@ -74,7 +93,7 @@ curl -X POST http://localhost:3000/transaction \
 ````
 
 #### Transactions List
-Para listar as transações feitas por esse usuário é só executar um get em `/transactions`
+Para listar as transações feitas por esse usuário é só executar um GET em `/transactions`
 ````
 curl -X GET  http://localhost:3000/transactions \
   -H 'Authorization: Bearer {{TOKEN}}' 
