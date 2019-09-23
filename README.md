@@ -17,7 +17,7 @@ Neste repositório, incluí um arquivo `docker-compose.yml` que é o que eu uso 
 `redis`
 `postgresql`
 
-Após instalar as dependências é necessário criar um banco de dados postgres e configurar as 
+Após instalar as dependências é necessário criar um banco de dados com nome `pagarme` e configurar as 
 informações de conexão no arquivo `.env`.
 
 
