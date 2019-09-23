@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "˜Bruno Campos<˜bhncampos@gmail.com˜>",
   "license": "MIT",
+  "engines": {
+    "node": ">=v10.16.3"
+  },
   "scripts": {
     "migration": "sequelize db:migrate",
     "postmigration": "sequelize db:seed:all",
