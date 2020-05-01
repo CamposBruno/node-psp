@@ -16,7 +16,9 @@
     "pretest": "NODE_ENV=test sequelize db:migrate && NODE_ENV=test sequelize db:seed:all",
     "posttest": "NODE_ENV=test sequelize db:migrate:undo:all ",
     "api": "nodemon -w src  src/server.js",
-    "payables": "nodemon -w src  src/payable.job.js"
+    "payables": "nodemon -w src  src/payable.job.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -29,7 +31,8 @@
     "morgan": "^1.9.1",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.18.4"
+    "sequelize": "^5.18.4",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
@@ -46,5 +49,6 @@
     "prettier": "^1.18.2",
     "sequelize-cli": "^5.5.1",
     "supertest": "^4.0.2"
-  }
+  },
+  "snyk": true
 }
